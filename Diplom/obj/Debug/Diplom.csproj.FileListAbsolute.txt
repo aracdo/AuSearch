@@ -63,3 +63,17 @@ C:\Users\Root\Desktop\DR\Diplom\obj\Debug\Diplom.csproj.CoreCompileInputs.cache
 C:\Users\Root\Desktop\DR\Diplom\obj\Debug\Diplom.csproj.CopyComplete
 C:\Users\Root\Desktop\DR\Diplom\obj\Debug\Diplom.exe
 C:\Users\Root\Desktop\DR\Diplom\obj\Debug\Diplom.pdb
+D:\au\AuSearch-master\git\Diplom\bin\Debug\Diplom.exe.config
+D:\au\AuSearch-master\git\Diplom\bin\Debug\Diplom.exe
+D:\au\AuSearch-master\git\Diplom\bin\Debug\Diplom.pdb
+D:\au\AuSearch-master\git\Diplom\bin\Debug\NAudio.dll
+D:\au\AuSearch-master\git\Diplom\bin\Debug\NAudio.xml
+D:\au\AuSearch-master\git\Diplom\obj\Debug\Diplom.csprojAssemblyReference.cache
+D:\au\AuSearch-master\git\Diplom\obj\Debug\BW.Diplom.MainForm.resources
+D:\au\AuSearch-master\git\Diplom\obj\Debug\BW.Diplom.FormOverlay.resources
+D:\au\AuSearch-master\git\Diplom\obj\Debug\BW.Diplom.Properties.Resources.resources
+D:\au\AuSearch-master\git\Diplom\obj\Debug\Diplom.csproj.GenerateResource.cache
+D:\au\AuSearch-master\git\Diplom\obj\Debug\Diplom.csproj.CoreCompileInputs.cache
+D:\au\AuSearch-master\git\Diplom\obj\Debug\Diplom.csproj.CopyComplete
+D:\au\AuSearch-master\git\Diplom\obj\Debug\Diplom.exe
+D:\au\AuSearch-master\git\Diplom\obj\Debug\Diplom.pdb

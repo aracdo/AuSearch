@@ -41,8 +41,8 @@ namespace BW.Diplom
             //mmDevice.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
             //progressBar1.Value = (int)(Math.Round(mmDevice.AudioMeterInformation.MasterPeakValue * 100));
             ////var deviceEnum = new MMDeviceEnumerator();
-            //var devices = enumerator.EnumerateAudioEndPoints(DataFlow.All, DeviceState.Active);
-            //audioDevsList.Items.AddRange(devices.ToArray());
+            var devices = enumerator.EnumerateAudioEndPoints(DataFlow.All, DeviceState.Active);
+            audioDevsList.Items.AddRange(devices.ToArray());
             //audioDevsList.DisplayMember = "FriendlyName";      
         }
         protected override void OnLoad(EventArgs e)

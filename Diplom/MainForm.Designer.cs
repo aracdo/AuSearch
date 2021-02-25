@@ -36,14 +36,16 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // runBtn
             // 
             this.runBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.runBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.runBtn.Location = new System.Drawing.Point(456, 20);
+            this.runBtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.runBtn.Location = new System.Drawing.Point(584, 20);
             this.runBtn.Name = "runBtn";
             this.runBtn.Size = new System.Drawing.Size(117, 38);
             this.runBtn.TabIndex = 2;
@@ -105,19 +107,34 @@
             this.progressBar2.TabIndex = 4;
             this.progressBar2.Value = 6;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.Location = new System.Drawing.Point(451, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 37);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Color";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(605, 76);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(733, 76);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.audioDevsList);
             this.Controls.Add(this.overlayCheckBox);
             this.Controls.Add(this.runBtn);
+            this.ForeColor = System.Drawing.Color.FloralWhite;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(749, 110);
+            this.MinimumSize = new System.Drawing.Size(749, 110);
             this.Name = "MainForm";
             this.Text = "Audio analyser";
             this.ResumeLayout(false);
@@ -134,6 +151,8 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

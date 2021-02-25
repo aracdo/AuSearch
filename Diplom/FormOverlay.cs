@@ -125,7 +125,8 @@ namespace BW.Diplom
         {
             Size bSize = this.ClientSize;
             Rectangle bRect = (bSize.Height > bSize.Width) ? new Rectangle(0, (bSize.Height - bSize.Width) / 2, bSize.Width, bSize.Width) : new Rectangle((bSize.Width - bSize.Height) / 2, 0, bSize.Height, bSize.Height);
-            using (Pen bPen = new Pen(Brushes.Gold, 5))
+                
+            using (Pen bPen = new Pen(parentForm.myColor, 5))
             {
                 
                 volume = (int)(volR * 100) - (int)(volL * 100);
@@ -147,6 +148,28 @@ namespace BW.Diplom
                 g.TranslateTransform(-center.X, -center.Y);
                 g.DrawLine(bPen, center, new Point(center.X, center.Y - bRect.Height / 2));
             }
+            //using (Pen bPen = new Pen(Brushes.IndianRed, 5))
+            //{
+
+            //    volume = (int)(volR * 100) - (int)(volL * 100);
+
+            //    Debug.Print(volume.ToString());
+            //    int mxVol = Math.Max((int)(volR * 100), (int)(volL * 100));
+            //    if (mxVol < 5) mxVol = 50;
+
+            //    angle = (int)Math.Round(Math.Asin((Math.Sqrt(mxVol * mxVol - volume * volume)) / mxVol) * (-180 / Math.PI), 0) + 90;
+            //    if (volume < 0)
+            //        angle = angle * -1;
+            //    if (volume == 0)
+            //        angle = 0;
+
+            //    //g.DrawEllipse(bPen, bRect);
+            //    Point center = new Point(bRect.X + bRect.Width / 2, bRect.Y + bRect.Height / 2);
+            //    g.TranslateTransform(center.X, center.Y);
+            //    g.RotateTransform(180-2*angle);
+            //    g.TranslateTransform(-center.X, -center.Y);
+            //    g.DrawLine(bPen, center, new Point(center.X, center.Y - bRect.Height / 2));
+            //}
         }
 
 
@@ -158,9 +181,11 @@ namespace BW.Diplom
         private void timer1_Tick(object sender, EventArgs e)
         {
             volL = mmDevice.AudioMeterInformation.PeakValues[0];
-            if (volL < 0.005) volL = 0; 
+            if (volL < 0.1) volL = 0;
+            if (volL > 0.9) volL = 0;
             volR = mmDevice.AudioMeterInformation.PeakValues[1];
-            if (volR < 0.005) volR = 0;
+            if (volR < 0.1) volR = 0;
+            if (volR > 0.9) volR = 0;
             this.Invalidate();
         }
     }

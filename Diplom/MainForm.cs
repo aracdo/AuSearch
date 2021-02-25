@@ -17,6 +17,7 @@ namespace BW.Diplom
 {
     public partial class MainForm : Form
     {
+        public Color myColor = Color.White;
         public bool overlay = false;
         private bool check = false;
         private FormOverlay frm = null;
@@ -25,6 +26,8 @@ namespace BW.Diplom
         public MainForm()
         {
             InitializeComponent();
+            colorDialog1.FullOpen = true;
+            colorDialog1.Color = this.BackColor;
         }
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -48,8 +51,9 @@ namespace BW.Diplom
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            LoadSettings();
             FillAuduioDevicesList();
+            LoadSettings();
+           
         }
         private void FillSettings()
         {
@@ -161,8 +165,19 @@ namespace BW.Diplom
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Value = (int)(Math.Round(mmDevice.AudioMeterInformation.PeakValues[0] * 100));
-            progressBar2.Value = (int)(Math.Round(mmDevice.AudioMeterInformation.PeakValues[1] * 100));
+            if (mmDevice != null)
+            {
+                progressBar1.Value = (int)(Math.Round(mmDevice.AudioMeterInformation.PeakValues[0] * 100));
+                progressBar2.Value = (int)(Math.Round(mmDevice.AudioMeterInformation.PeakValues[1] * 100));
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            myColor = colorDialog1.Color;
         }
 
 
